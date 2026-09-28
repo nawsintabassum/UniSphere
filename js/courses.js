@@ -1,0 +1,8 @@
+
+let editId=null;
+function render(){const q=(document.getElementById('search').value||'').toLowerCase();const a=getData('courses',[]).filter(x=>JSON.stringify(x).toLowerCase().includes(q));document.getElementById('tableBody').innerHTML=a.length?a.map(x=>`<tr><td><b>${esc(x.code)}</b></td><td>${esc(x.name)}</td><td>${x.credit}</td><td>${esc(x.teacher)}</td><td>${esc(x.section)}</td><td>${esc(x.semester)}</td><td>${esc(x.room)}</td><td>${rowActions(x.id,'openEdit','delItem')}</td></tr>`).join(''):`<tr><td colspan="8"><div class="empty">No courses found.</div></td></tr>`}
+function openEdit(id){const x=getData('courses',[]).find(v=>v.id===id);editId=id;['code','name','credit','teacher','section','semester','room'].forEach(k=>document.getElementById('f_'+k).value=x[k]??'');modalTitle.textContent='Edit Course';openModal('itemModal')}
+function delItem(id){if(confirmDelete()){deleteData('courses',id);appNotification('Course deleted');notify('Course deleted');render()}}
+addBtn.onclick=()=>{editId=null;itemForm.reset();modalTitle.textContent='Add Course';openModal('itemModal')};
+itemForm.onsubmit=e=>{e.preventDefault();const x={id:editId||uid(),code:f('code'),name:f('name'),credit:Number(f('credit'))||0,teacher:f('teacher'),section:f('section'),semester:f('semester'),room:f('room')};editId?updateData('courses',editId,x):addData('courses',x);appNotification(editId?'Course updated':'New course added');notify('Course saved');closeModal('itemModal');render()};function f(k){return document.getElementById('f_'+k).value.trim()}
+search.oninput=render;document.addEventListener('DOMContentLoaded',render);
