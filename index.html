@@ -1,1 +1,79 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login | CampusConnect</title><link rel="stylesheet" href="css/style.css"></head><body data-public="true"><div class="auth-page"><div class="auth-box"><div class="auth-logo">Campus<span>Connect</span></div><p class="muted" style="text-align:center">Student Campus Management System</p><form id="loginForm"><div class="field"><label>Student ID</label><input name="studentId" placeholder="Any student ID" required></div><div class="field"><label>Email</label><input name="email" type="email" placeholder="student@gmail.com" required></div><div class="field"><label>Password</label><div class="password-wrap"><input id="loginPassword" name="password" type="password" required><button type="button" data-show-password="loginPassword">Show</button></div></div><div class="auth-actions"><span>Remember login</span><a id="forgot" class="link">Forgot password?</a></div><div id="loginError" style="color:#dc2626"></div><button class="btn" style="width:100%;margin-top:10px">Login</button></form><form id="registerForm" style="display:none"><div class="field"><label>Full Name</label><input name="name" required></div><div class="field"><label>Student ID</label><input name="studentId" required></div><div class="field"><label>Email</label><input name="email" type="email" required></div><div class="field"><label>Password</label><input name="password" type="password" required></div><div id="regError" style="color:#dc2626"></div><button class="btn" style="width:100%">Create Account</button></form><p style="text-align:center;margin-top:18px"><span id="showRegister" class="link">Create Account</span><span id="showLogin" class="link" style="display:none">Back to Login</span></p><p class="muted" style="font-size:12px;text-align:center">Demo login: any Student ID + valid email + any password</p></div></div><div class="toast-container"></div><script src="js/storage.js"></script><script src="js/auth.js"></script></body></html>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Login | UniSphere</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body data-public="true">
+        <div class="auth-page">
+            <div class="auth-box">
+                <div class="auth-logo">Uni<span>Sphere</span>
+                </div>
+                <p class="muted" style="text-align:center">Student Campus Management System</p>
+                <form id="loginForm">
+                    <div class="field">
+                        label>Student ID</label>
+                        <input name="studentId" placeholder="Any student ID" required>
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input name="email" type="email" placeholder="student@gmail.com" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="password-wrap">
+                            <input id="loginPassword" name="password" type="password" required>
+                            <button type="button" data-show-password="loginPassword">Show</button>
+                        </div>
+                    </div>
+                    <div class="auth-actions">
+                        <span>Remember login</span>
+                        <a id="forgot" class="link">Forgot password?</a>
+                    </div>
+                    <div id="loginError" style="color:#dc2626">
+
+                    </div>
+                    <button class="btn" style="width:100%;margin-top:10px">Login</button>
+                </form>
+                <form id="registerForm" style="display:none">
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input name="name" required>
+                    </div>
+                    <div class="field">
+                        <label>Student ID</label>
+                        <input name="studentId" required>
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input name="email" type="email" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input name="password" type="password" required>
+                    </div>
+                    <div id="regError" style="color:#dc2626">
+
+                    </div>
+                    <button class="btn" style="width:100%">Create Account</button>
+                </form>
+                <p style="text-align:center;margin-top:18px">
+                    <span id="showRegister" class="link">Create Account</span>
+                    <span id="showLogin" class="link" style="display:none">Back to Login</span>
+                </p>
+                <p class="muted" style="font-size:12px;text-align:center">Demo login: any Student ID + valid email + any password</p>
+            </div>
+        </div>
+        <div class="toast-container">
+
+        </div>
+        <script src="js/storage.js">
+
+        </script>
+        <script src="js/auth.js">
+
+        </script>
+        </body>
+        </html>
