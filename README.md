@@ -1,4 +1,4 @@
-# CampusConnect
+# UniSphere
 
 Complete frontend-only Student Campus Management Web Application.
 
